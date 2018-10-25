@@ -2,17 +2,24 @@ package ex2;
 
 class Race2 {
 	public static void main(String[] args) {
-		ISemaphore sem = new Semaphore();
+		int numberOfLoops = 1000000;
+		ISemaphore sem = new SemaphoreWithWhile();
 		Counter cnt = new Counter(0);
-		IThread it = new IThread(cnt, sem);
-		DThread dt = new DThread(cnt, sem);
+		IThread it1 = new IThread(cnt, sem, numberOfLoops);
+		IThread it2 = new IThread(cnt, sem, numberOfLoops);
+		DThread dt1 = new DThread(cnt, sem, numberOfLoops);
+		DThread dt2 = new DThread(cnt, sem, numberOfLoops);
 
-		it.start();
-		dt.start();
+		it1.start();
+		it2.start();
+		dt1.start();
+		dt2.start();
 
 		try {
-			it.join();
-			dt.join();
+			it1.join();
+			dt1.join();
+			it2.join();
+			dt2.join();
 		} catch (InterruptedException ie) {
 		}
 
