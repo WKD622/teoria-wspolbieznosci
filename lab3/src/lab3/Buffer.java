@@ -1,12 +1,19 @@
 package lab3;
 
-public class Buffer {
-	public void put(int i) {
+import java.util.LinkedList;
 
+public class Buffer {
+	LinkedList<Object> buffer;
+
+	public Buffer(int size) {
+		this.buffer = new LinkedList<>();
 	}
 
-	public int get() {
-		return 0;
+	public void put(int i) {
+		buffer.add(new Object());
+	}
 
+	public Object get() {
+		return buffer.removeFirst();
 	}
 }
