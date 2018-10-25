@@ -1,0 +1,1552 @@
+
+<!-- saved from url=(0039)http://home.agh.edu.pl/~funika/tw/lab2/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="http://home.agh.edu.pl/~funika/tw/lab2/index_pliki/filelist.xml">
+<link rel="Edit-Time-Data" href="http://home.agh.edu.pl/~funika/tw/lab2/index_pliki/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Teoria współbieżności</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>LENOVO USER</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>LENOVO USER</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>9</o:TotalTime>
+  <o:Created>2013-10-14T20:04:00Z</o:Created>
+  <o:LastSaved>2013-10-14T20:13:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>760</o:Words>
+  <o:Characters>4563</o:Characters>
+  <o:Company>LENOVO CUSTOMER</o:Company>
+  <o:Lines>38</o:Lines>
+  <o:Paragraphs>10</o:Paragraphs>
+  <o:CharactersWithSpaces>5313</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel="themeData" href="http://home.agh.edu.pl/~funika/tw/lab2/index_pliki/themedata.thmx">
+<link rel="colorSchemeMapping" href="http://home.agh.edu.pl/~funika/tw/lab2/index_pliki/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>97</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>PL</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<link rel="Stylesheet" type="text/css" media="all" href="./Teoria współbieżności-2_files/style.css">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:238;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:238;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627400839 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:238;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:238;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Nagłówek 1 Znak";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;
+	font-weight:bold;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Nagłówek 2 Znak";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Nagłówek 3 Znak";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;
+	font-weight:bold;}
+h4
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Nagłówek 4 Znak";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:9.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h5
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Nagłówek 5 Znak";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:9.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML - wstępnie sformatowany Znak";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	background:#BAD4FF;
+	border:none;
+	mso-border-alt:solid #02007F .75pt;
+	padding:0cm;
+	mso-padding-alt:3.0pt 3.0pt 3.0pt 3.0pt;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Courier New";
+	color:windowtext;}
+tt
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Tekst dymka Znak";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:windowtext;}
+span.Nagwek4Znak
+	{mso-style-name:"Nagłówek 4 Znak";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Nagłówek 4";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;
+	font-style:italic;}
+span.Nagwek5Znak
+	{mso-style-name:"Nagłówek 5 Znak";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Nagłówek 5";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#243F60;
+	mso-themecolor:accent1;
+	mso-themeshade:127;}
+span.HTML-wstpniesformatowanyZnak
+	{mso-style-name:"HTML - wstępnie sformatowany Znak";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML - wstępnie sformatowany";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Consolas;}
+p.footer, li.footer, div.footer
+	{mso-style-name:footer;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.box, li.box, div.box
+	{mso-style-name:box;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.box-header, li.box-header, div.box-header
+	{mso-style-name:box-header;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	background:#6699FF;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+p.box-content, li.box-content, div.box-content
+	{mso-style-name:box-content;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.blue-box, li.blue-box, div.blue-box
+	{mso-style-name:blue-box;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid #6699FF .75pt;
+	padding:0cm;
+	mso-padding-alt:4.0pt 4.0pt 4.0pt 4.0pt;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.reference, li.reference, div.reference
+	{mso-style-name:reference;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.highlight, li.highlight, div.highlight
+	{mso-style-name:highlight;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.blue, li.blue, div.blue
+	{mso-style-name:blue;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.journal-date, li.journal-date, div.journal-date
+	{mso-style-name:journal-date;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.status, li.status, div.status
+	{mso-style-name:status;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+p.command, li.command, div.command
+	{mso-style-name:command;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	background:#BAD4FF;
+	border:none;
+	mso-border-alt:solid #02007F .75pt;
+	padding:0cm;
+	mso-padding-alt:3.0pt 3.0pt 3.0pt 3.0pt;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.code, li.code, div.code
+	{mso-style-name:code;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.white, li.white, div.white
+	{mso-style-name:white;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.title, li.title, div.title
+	{mso-style-name:title;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.5pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+p.small, li.small, div.small
+	{mso-style-name:small;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.panel, li.panel, div.panel
+	{mso-style-name:panel;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.legalbg, li.legalbg, div.legalbg
+	{mso-style-name:legalbg;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	background:#99CCFF;
+	font-size:10.0pt;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+span.Nagwek1Znak
+	{mso-style-name:"Nagłówek 1 Znak";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Nagłówek 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Nagwek2Znak
+	{mso-style-name:"Nagłówek 2 Znak";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Nagłówek 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Nagwek3Znak
+	{mso-style-name:"Nagłówek 3 Znak";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Nagłówek 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.TekstdymkaZnak
+	{mso-style-name:"Tekst dymka Znak";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Tekst dymka";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:203559752;
+	mso-list-template-ids:-1259731484;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1
+	{mso-list-id:669676496;
+	mso-list-template-ids:1660346440;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:882671182;
+	mso-list-template-ids:1888233372;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l3
+	{mso-list-id:1736780220;
+	mso-list-template-ids:1187276090;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l4
+	{mso-list-id:1754618037;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-580744498 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l4:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:1826315739;
+	mso-list-template-ids:-1411761858;}
+@list l6
+	{mso-list-id:1937322598;
+	mso-list-template-ids:1106551926;}
+@list l7
+	{mso-list-id:2101949497;
+	mso-list-template-ids:1470415760;}
+@list l7:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:Standardowy;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="papayawhip" lang="PL" link="#003390" vlink="gray" style="tab-interval:
+35.4pt">
+
+<div class="WordSection1">
+
+<div align="center">
+
+<table class="MsoNormalTable" border="0" cellpadding="0" width="80%" style="width:80.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes">
+  <td style="padding:.75pt .75pt .75pt .75pt">
+  <div class="MsoNormal" align="center" style="text-align:center"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">
+  <hr size="2" width="100%" align="center">
+  </span></div>
+  <h1><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Teoria współbieżności<o:p></o:p></span></h1>
+  <h2><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Laboratorium 2<o:p></o:p></span></h2>
+  <div class="MsoNormal" align="center" style="text-align:center"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">
+  <hr size="2" width="100%" align="center">
+  </span></div>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Wyścig - wyjaśnienie<o:p></o:p></span></h3>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><a href="http://home.agh.edu.pl/~funika/tw/lab2/Race2.java">Licznik</a> <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Metoda inkrementacji w
+  <span class="SpellE">Bytecode</span> <o:p></o:p></span></p>
+  <div style="mso-element:para-border-div;border:solid #02007F 1.0pt;
+  mso-border-alt:solid #02007F .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt;
+  background:#BAD4FF;margin-left:18.0pt;margin-right:0cm"><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black">public <span class="SpellE">void</span> <span class="SpellE">inc</span>();<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">Code</span>:<o:p></o:p></span></pre><pre style="margin-left:
+  18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:Courier;mso-bidi-font-family:Courier;
+  color:black"><span style="mso-list:Ignore">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>0:<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>aload_0<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>1:<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>dup<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">7.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>2:<span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">getfield</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>#2; //Field i:I<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">8.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>5:<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>iconst_1<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">9.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>6:<span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">iadd</span><o:p></o:p></span></pre><pre style="margin-left:18.0pt;
+  text-indent:-18.0pt;mso-list:l3 level1 lfo1;background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:Courier;mso-bidi-font-family:Courier;
+  color:black"><span style="mso-list:Ignore">10.</span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>7:<span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">putfield</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>#2; //Field i:I<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">11.</span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>10:<span style="mso-spacerun:yes">&nbsp; </span>return<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo1;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">12.</span></span><!--[endif]--><span style="color:black">}<o:p></o:p></span></pre></div>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l3 level2 lfo1;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">0: załadowanie na stos
+  argumentu o indeksie 0 (niejawny argument </span><span class="SpellE"><tt><span style="font-size:10.0pt;color:black">this</span></tt></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">) <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l3 level2 lfo1;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">2: wartość pola o
+  referencji #2 jest pobierana i umieszczana na stosie <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l3 level2 lfo1;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">5: umieszcza stałą
+  całkowita '1' na stosie <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l3 level2 lfo1;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">6: dodaje do siebie
+  dwa górne elementy stosu (muszą być typu <span class="SpellE">integer</span>,
+  są zdejmowane ze stosu) i umieszcza na nim wynik dodawania <o:p></o:p></span></p>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Monitory w <span class="SpellE">javie</span><o:p></o:p></span></h3>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo2;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Związane z każdym
+  obiektem <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo2;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Same nie są
+  reprezentowane jako klasy / obiekty! <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo2;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Synchronizują dostęp
+  do metod i bloków <span class="SpellE"><i>synchronized</i></span> <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo2;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Dodatkowy monitor
+  związany z klasą - dla metod statycznych synchronizowanych <o:p></o:p></span></p>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Synchronizacja<o:p></o:p></span></h3>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Metody <span class="SpellE"><i>synchronized</i></span> <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Blok <span class="SpellE"><i>synchronized</i></span> <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l2 level2 lfo3;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">użyteczny do
+  synchronizacji dostępu do już istniejących obiektów, do których nie można
+  dodać żadnych metod <o:p></o:p></span></p>
+  <div style="mso-element:para-border-div;border:solid #02007F 1.0pt;
+  mso-border-alt:solid #02007F .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt;
+  background:#BAD4FF;margin-left:18.0pt;margin-right:0cm"><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span class="SpellE"><span style="color:black">synchronized</span></span><span style="color:black"> ( <span class="SpellE">obj</span> ) {<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>...<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">obj.method</span>();<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>...<o:p></o:p></span></pre><pre style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+  background:#BAD4FF"><!--[if !supportLists]--><span style="mso-fareast-font-family:
+  Courier;mso-bidi-font-family:Courier;color:black"><span style="mso-list:Ignore">7.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="color:black">}<o:p></o:p></span></pre></div>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">8.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Zasady synchronizacji <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l2 level2 lfo3;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Wejście do metody
+  synchronizowanej (bloku synchronizowanego) powoduje <i>zajęcie monitora</i> (<i>którego?</i>),
+  opuszczenie jej - <i>zwolnienie monitora</i> <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l2 level2 lfo3;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Metoda synchronizowana
+  (blok synchronizowany) może być wykonywana na rzecz danego obiektu tylko
+  przez wątek będący w posiadaniu monitora tego obiektu <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l2 level2 lfo3;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Tylko jeden wątek może
+  być w posiadaniu monitora danego obiektu, a po jego zajęciu tylko on sam może
+  go zwolnić <o:p></o:p></span></p>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Metody <span class="SpellE">wait</span>, <span class="SpellE">notify</span> / <span class="SpellE">notifyAll</span><o:p></o:p></span></h3>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo4;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Zdefiniowane w klasie <span class="SpellE">Object</span> <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo4;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Koordynacja działania
+  wielu wątków <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo4;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:
+  9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black">wait</span></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"> <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l7 level2 lfo4;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">może być wywołana
+  tylko przez wątek będący w posiadaniu monitora <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l7 level2 lfo4;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">powoduje uśpienie
+  wątku w kolejce związanej z monitorem (<i>którym?</i>) <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l7 level2 lfo4;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">zwalnia monitor <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l7 level2 lfo4;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">wątek może być
+  obudzony tylko gdy inny wątek wywoła <span class="SpellE">notify</span> (<i>jaki
+  to musi być wątek?</i>) <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo4;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:
+  9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black">notify</span></span><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">
+  <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l7 level2 lfo4;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">budzi jeden wątek spośród
+  oczekujących w kolejce '<span class="SpellE">wait</span>' (<i>której kolejce?</i>)
+  <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l7 level2 lfo4;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">obudzony wątek
+  oczekuje aż wątek wywołujący </span><span class="SpellE"><tt><span style="font-size:10.0pt;color:black">notify</span></tt></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black"> zwolni monitor <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l7 level2 lfo4;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span class="SpellE"><tt><span style="font-size:
+  10.0pt;color:black">notifyAll</span></tt></span><span style="font-size:9.5pt;
+  font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black"> działa jak </span><span class="SpellE"><tt><span style="font-size:10.0pt;color:black">notify</span></tt></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">, ale budzi wszystkie wątki <o:p></o:p></span></p>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Krytyka "Monitorów" Javy<o:p></o:p></span></h3>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo5;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:
+  9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black">Brinch</span></span><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">
+  Hansen - pionier programowania współbieżnego (koncepcja Monitora, <span class="SpellE">Concurrent</span> Pascal): Java ożywia koncepcje sprzed ćwierć
+  wieku i robi to źle. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo5;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:
+  9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black">Hoare</span></span><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">
+  - pojęcie bezpieczeństwa (security) języka (z punktu widzenia współbieżności
+  / równoległości): <cite><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;">język
+  powinien umożliwić kompilatorowi i środowisku uruchomieniowemu wykrywanie jak
+  największej ilości przypadków, w których koncepcje języka się załamują i
+  produkują bezsensowne wyniki. Dla języka programowania równoległego
+  najważniejszą miarą bezpieczeństwa jest sprawdzenie, czy procesy operują na
+  rozłącznych zbiorach zmiennych i że nie kolidują ze sobą w sensie zależności
+  czasowych</span></cite> (np. rezultat zależy od relatywnej kolejności
+  wykonania instrukcji przez dwa procesy). <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo5;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Np. kompilator <span class="SpellE">Concurrent</span> Pascala sprawdza, czy każdy proces i monitor
+  odwołuje się tylko do swoich zmiennych, że procesy komunikują się wyłącznie
+  przez procedury monitora, i że procesy nie zablokują się poprzez rekursywne
+  wywołanie procedury monitora. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo5;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Z kolei interpreter <span class="SpellE">Concurrent</span> Pascala zapewnia wzajemne wykluczanie
+  wszystkich operacji na zmiennych jakiegokolwiek procesu lub monitora.
+  Uniemożliwia nawet jednoczesny dostęp do zmiennej przez proces i urządzenie
+  peryferyjne. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo5;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:
+  9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black">Brinch</span></span><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">
+  Hansen twierdzi, że tak naprawdę Java nie wspiera koncepcji monitorów, gdyż: <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l0 level2 lfo5;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Metody <span class="SpellE">javy</span> są domyślnie niesynchronizowane, chyba że są
+  zadeklarowane jako </span><span class="SpellE"><tt><span style="font-size:10.0pt;
+  color:black">synchronized</span></tt></span><span style="font-size:9.5pt;
+  font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black">. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:72.0pt;text-indent:-18.0pt;mso-list:l0 level2 lfo5;tab-stops:
+  list 72.0pt"><!--[if !supportLists]--><span style="font-size:10.0pt;mso-bidi-font-size:
+  9.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+  color:black"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Zmienne klasy są
+  publiczne (w obrębie pakietu), jeśli nie są zadeklarowane jako </span><span class="SpellE"><tt><span style="font-size:10.0pt;color:black">private</span></tt></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo5;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">To nie uniemożliwia
+  całkowicie pisania poprawnych programów równoległych, ale uniemożliwia
+  wykrywanie wielu błędów zależnych od czasu (<span class="SpellE"><i>time-dependant</i></span>)
+  na poziomie kompilacji i uruchomienia. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo5;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">7.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Błąd Javy: decyzja,
+  żeby używać sekwencyjnej części języka do implementacji wsparcia dla
+  równoległości. Java nie jest językiem "bezpiecznym". <o:p></o:p></span></p>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Definicja operacji na semaforze<o:p></o:p></span></h3>
+  <ul type="disc">
+   <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l1 level1 lfo6;tab-stops:list 36.0pt"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+       &quot;Times New Roman&quot;">Opuszczenie, <span class="SpellE">s.P</span>(): Jeśli
+       S==1 to S=0, w przeciwnym wypadku wstrzymaj działanie procesu
+       wykonującego tę operację. <o:p></o:p></span></li>
+   <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l1 level1 lfo6;tab-stops:list 36.0pt"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+       &quot;Times New Roman&quot;">Podniesienie, <span class="SpellE">s.V</span>(): Jeśli
+       są procesy wstrzymane w wyniku opuszczania semafora S, to wznów jeden z
+       nich, w przeciwnym razie S=1. <o:p></o:p></span></li>
+  </ul>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Zadania<o:p></o:p></span></h3>
+  <p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt;mso-list:l4 level1 lfo8"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  Verdana;mso-bidi-font-family:Verdana"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;">zaimplementowac</span></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;"> <a href="http://home.agh.edu.pl/~funika/tw/lab2/SemaforMon.java">semafor binarny</a> za
+  <span class="SpellE">pomoca</span> metod <span class="SpellE">wait</span> i <span class="SpellE">notify</span>, <span class="SpellE">uzyc</span> go do
+  synchronizacji programu <span class="SpellE"><i style="mso-bidi-font-style:
+  normal">Wyscig</i></span><o:p></o:p></span></p>
+  <p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt;mso-list:l4 level1 lfo8"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  Verdana;mso-bidi-font-family:Verdana"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;">pokazac</span></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;">, ze do
+  implementacji semafora za <span class="SpellE">pomoca</span> metod <span class="SpellE">wait</span> i <span class="SpellE">notify</span> nie wystarczy
+  instrukcja <span class="SpellE"><i>if</i></span> tylko potrzeba <span class="SpellE">uzyc</span> <span class="SpellE"><i>while</i></span><i> </i>. <span class="SpellE">Wyjasnic</span> teoretycznie dlaczego i <span class="SpellE">potwierdzic</span>
+  eksperymentem w praktyce. (<span class="SpellE">wskazowka</span>: <span class="SpellE">rozwazyc</span> dwie kolejki: <span class="SpellE">czekajaca</span>
+  na <span class="SpellE">wejscie</span> do monitora obiektu oraz <span class="SpellE">kolejke</span> <span class="SpellE">zwiazana</span> z instrukcja <span class="SpellE"><i>wait</i></span><i> </i>, <span class="SpellE">rozwazyc</span>
+  kto kiedy jest budzony i kiedy <span class="SpellE">nastepuje</span> <span class="SpellE">wyscig</span>). <o:p></o:p></span></p>
+  <p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt;mso-list:l4 level1 lfo8"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  Verdana;mso-bidi-font-family:Verdana;color:black"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span class="SpellE"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;">Zaimplementowac</span></span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;"> <a href="http://home.agh.edu.pl/~funika/tw/lab2/sem.html">semafor licznikowy (<span class="SpellE">ogolny</span>) </a>za <span class="SpellE">pomoca</span> <span class="SpellE">semaforow</span> binarnych. Czy semafor binarny jest <span class="SpellE">szczegolnym</span> przypadkiem semafora <span class="SpellE">ogolnego</span>
+  ?</span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+  <h3><span style="font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">Bibliografia<o:p></o:p></span></h3>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l6 level1 lfo7;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span style="font-size:9.5pt;font-family:
+  &quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;mso-bidi-font-family:
+  Verdana;color:black"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span lang="EN-US" style="font-size:9.5pt;
+  font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black;mso-ansi-language:EN-US">Per <span class="SpellE">Brinch</span>
+  Hansen: </span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><a href="http://brinch-hansen.net/papers/1999b.pdf"><span lang="EN-US" style="mso-ansi-language:EN-US">Java Insecure Parallelism</span></a></span><span lang="EN-US" style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;mso-ansi-language:EN-US">.
+  </span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">ACM SIGPLAN <span class="SpellE">Notices</span>, <span class="SpellE">April</span> 1999, s. 38-45. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  margin-left:36.0pt;text-indent:-18.0pt;mso-list:l6 level1 lfo7;tab-stops:
+  list 36.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-size:9.5pt;
+  font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Verdana;
+  mso-bidi-font-family:Verdana;color:black;mso-ansi-language:EN-US"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span lang="EN-US" style="font-size:9.5pt;
+  font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:black;mso-ansi-language:EN-US">Thomas W. Christopher, George K. <span class="SpellE">Thiruvathukal</span>: High-Performance Java Platform Computing,
+  Prentice Hall, <span class="SpellE">Luty</span> 2001. </span><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black"><a href="http://java.sun.com/developer/Books/performance2"><span class="SpellE"><span lang="EN-US" style="mso-ansi-language:EN-US">Wybrane</span></span><span lang="EN-US" style="mso-ansi-language:EN-US"> <span class="SpellE">rozdziały</span></span></a></span><span lang="EN-US" style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black;mso-ansi-language:EN-US">.
+  <o:p></o:p></span></p>
+  <div class="MsoNormal" align="center" style="text-align:center"><span style="font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black">
+  <hr size="2" width="100%" align="center">
+  </span></div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoNormal"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+</body><autoscroll></autoscroll></html>
