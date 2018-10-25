@@ -15,21 +15,26 @@ public class Semaphore implements ISemaphore {
 	public synchronized void leave() {
 		this.taken = false;
 		notify();
-		logger.info("Released");
+		logger.info("Released " + Thread.currentThread().getName());
 	}
 
 	@Override
 	public synchronized void take() {
-		if (taken) {
+		if (!canBeTaken()) {
 			try {
-				logger.info("Waiting");
+				logger.info("Waiting " + Thread.currentThread().getName());
 				wait();
 			} catch (InterruptedException e) {
-				logger.info("SemaphoreBinary interrupted");
+				// logger.info("SemaphoreBinary interrupted");
 			}
 		}
 		this.taken = true;
-		logger.info("Aqquired");
+		logger.info("Aqquired " + Thread.currentThread().getName());
+	}
+
+	@Override
+	public boolean canBeTaken() {
+		return !taken;
 	}
 
 }

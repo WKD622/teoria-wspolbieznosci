@@ -5,4 +5,6 @@ public interface ISemaphore {
 	void leave();
 
 	void take();
+	
+	boolean canBeTaken();
 }
