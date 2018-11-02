@@ -8,15 +8,22 @@ public class Consumer extends Thread {
 	}
 
 	public synchronized void run() {
-		while(true) {
+		while (true) {
 			try {
-				wait();
+				if (!_buf.canBeTaken())
+					wait();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			_buf.get();
 			System.out.println("Consumer eating " + Thread.currentThread().getId());
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			notify();
 		}
 	}

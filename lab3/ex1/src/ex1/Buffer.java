@@ -5,6 +5,7 @@ import java.util.LinkedList;
 public class Buffer {
 	LinkedList<Object> buffer;
 	int maxLength;
+	boolean taken;
 
 	public Buffer(int maxLength) {
 		this.buffer = new LinkedList<>();
@@ -19,5 +20,9 @@ public class Buffer {
 	public void get() {
 		if (!buffer.isEmpty())
 			buffer.removeFirst();	
+	}
+	
+	boolean canBeTaken() {
+		return !taken;
 	}
 }	
