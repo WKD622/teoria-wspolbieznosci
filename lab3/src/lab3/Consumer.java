@@ -8,8 +8,9 @@ public class Consumer extends Thread {
 	}
 
 	public void run() {
-		for (int i = 0; i < 100; ++i) {
+		while(true) {
 			_buf.get();
+			System.out.println("Consumer eating " + Thread.currentThread().getId());
 		}
 	}
 }

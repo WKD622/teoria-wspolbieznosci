@@ -8,8 +8,9 @@ public class Producer extends Thread {
 	}
 
 	public void run() {
-		for (int i = 0; i < 100; ++i) {
-			_buf.put(i);
+		while(true) {
+			_buf.put();
+			System.out.println("Producer producing " + Thread.currentThread().getId());	
 		}
 	}
 }

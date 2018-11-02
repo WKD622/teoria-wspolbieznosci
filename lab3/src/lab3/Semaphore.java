@@ -18,12 +18,24 @@ public class Semaphore implements ISemaphore {
 			}
 		}
 		taken = true;
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public synchronized void leave() {
 		taken = false;
-		notifyAll();
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		notifyAll();	
 	}
 
 	@Override
