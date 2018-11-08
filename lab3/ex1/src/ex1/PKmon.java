@@ -11,6 +11,5 @@ public class PKmon {
 		producer.start();
 		consumer1.start();
 		consumer2.start();
-		
 	}
 }
