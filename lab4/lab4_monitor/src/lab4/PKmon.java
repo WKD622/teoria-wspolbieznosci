@@ -6,7 +6,7 @@ import java.util.List;
 public class PKmon {
 	public static void main(String[] args) {
 		int numberOfConsumers = 5;
-		int numberOfProducers = 6;
+		int numberOfProducers = 5;
 		Buffer buffer = new Buffer(2 * numberOfProducers);
 		List<Producer> producers = new ArrayList<>();
 		for (int i = 0; i < numberOfProducers; i++)

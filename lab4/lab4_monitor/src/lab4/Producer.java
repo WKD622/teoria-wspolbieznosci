@@ -21,6 +21,8 @@ public class Producer extends Thread {
 			Random rand = new Random();
 			for (int i = 0; i < rand.nextInt(5); i++)
 				_buf.put();
+			Stats.liczbaWywolanProducera++;
+			System.out.println("Producer" + Stats.liczbaWywolanProducera);
 			System.out.println("Producer producing " + Thread.currentThread().getId());
 			// try {
 			// Thread.sleep(1000);

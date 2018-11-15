@@ -18,9 +18,12 @@ public class Consumer extends Thread {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 			Random rand = new Random();
 			for (int i = 0; i < rand.nextInt(5); i++)
 				_buf.get();
+			Stats.liczbaWywolanConsumenta++;
+			System.out.println("consumer" + Stats.liczbaWywolanConsumenta);
 			System.out.println("Consumer eating " + Thread.currentThread().getId());
 			// try {
 			// Thread.sleep(1000);

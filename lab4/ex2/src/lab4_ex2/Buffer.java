@@ -19,12 +19,10 @@ public class Buffer {
 
 	public void add(int numberToAdd) throws InterruptedException {
 		lock.lock();
-
 		try {
 			while (buffer.size() >= maxLength - numberToAdd) {
 				notEnoughtEmpty.await();
 			}
-
 			for (int i = 0; i < numberToAdd; i++)
 				buffer.add(new Object());
 
