@@ -11,12 +11,12 @@ public class Writer extends Thread {
 
 	public void run() {
 		try {
-			while (true) {
+//			while (true) {
 				wsem.acquire();
-				Thread.sleep(100);
-				System.out.println("Writing");
+				//Thread.sleep(100);
+				//System.out.println("Writing");
 				wsem.release();
-			}
+//			}
 		} catch (InterruptedException e) {
 			return;
 		}

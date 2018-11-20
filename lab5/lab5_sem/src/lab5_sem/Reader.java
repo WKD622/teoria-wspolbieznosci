@@ -14,20 +14,20 @@ public class Reader extends Thread {
 
 	public void run() {
 		try {
-			while (true) {
+//			while (true) {
 				x.acquire();
 				Reader.readCount++;
 				if (Reader.readCount == 1)
 					wsem.acquire();
 				x.release();
-				System.out.println("Reading");
-				Thread.sleep(100);
+				//System.out.println("Reading");
+				//Thread.sleep(100);
 				x.acquire();
 				Reader.readCount--;
 				if (Reader.readCount == 0)
 					wsem.release();
 				x.release();
-			}
+//			}
 		} catch (InterruptedException e) {
 			return;
 		}

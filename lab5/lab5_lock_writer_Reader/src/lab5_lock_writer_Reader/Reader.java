@@ -10,14 +10,16 @@ public class Reader extends Thread {
 	}
 
 	public void run() {
-		lock.readLock().unlock();
-		System.out.println("Writing");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		lock.readLock().lock();
+//		for (int i = 0; i < 3; i++) {
+			lock.readLock().lock();
+//			System.out.println("Reading " + Thread.currentThread().getName());
+//			try {
+//				//Thread.sleep(50);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+			lock.readLock().unlock();
+//		}
 	}
 }

@@ -1,35 +1,69 @@
 package lab5_lock_writer_Reader;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		ReadWriteLock lock = new ReentrantReadWriteLock();
+		Random rand = new Random();
+		try {
+			PrintWriter results = new PrintWriter("results.txt", "UTF-8");
 
-		int numberOfWriters = 5;
-		int numberOfReaders = 5;
-		List<Thread> threadsW = new ArrayList<>();
+			for (int j = 0; j < 1000; j++) {
+				int numberOfReaders = rand.nextInt(100) + 10;
+				int numberOfWriters = rand.nextInt(10) + 1;
 
-		List<Thread> threadsR = new ArrayList<>();
+				List<Thread> writers = new ArrayList<>();
+				List<Thread> readers = new ArrayList<>();
 
-		for (int i = 0; i < numberOfReaders; i++) {
-			threadsW.add(new Thread(new Reader(lock)));
+				for (int i = 0; i < numberOfWriters; i++) {
+					writers.add(new Thread(new Writer(lock)));
+				}
+
+				for (int i = 0; i < numberOfReaders; i++) {
+					readers.add(new Thread(new Reader(lock)));
+				}
+
+				long startTime = System.nanoTime();
+
+				for (int i = 0; i < numberOfWriters; i++) {
+					readers.get(i).start();
+					writers.get(i).start();
+
+					readers.get(i).join();
+					writers.get(i).join();
+				}
+
+				for (int i = numberOfWriters; i < numberOfReaders; i++) {
+					readers.get(i).start();
+					readers.get(i).join();
+				}
+
+				long stopTime = System.nanoTime();
+				results.print(numberOfReaders + numberOfWriters);
+				results.print("     ");
+				results.println(TimeUnit.SECONDS.convert(stopTime - startTime, TimeUnit.MILLISECONDS));
+			}
+			results.close();
+			Runtime.getRuntime().exec("gnuplot --persist -e 'plot \"results.txt\" u 1:2'\n");
+
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-
-		for (int i = 0; i < numberOfWriters; i++) {
-			threadsR.add(new Thread(new Writer(lock)));
-		}
-
-		for (Thread writer : threadsW)
-			writer.start();
-
-		for (Thread reader : threadsR)
-			reader.start();
-
 	}
 
 }
