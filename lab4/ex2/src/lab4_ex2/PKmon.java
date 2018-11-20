@@ -24,6 +24,7 @@ public class PKmon {
 
 		for (Thread producer : threadsP)
 			producer.start();
+		
 
 	}
 }
