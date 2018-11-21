@@ -1,4 +1,3 @@
-package lab5_list;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
